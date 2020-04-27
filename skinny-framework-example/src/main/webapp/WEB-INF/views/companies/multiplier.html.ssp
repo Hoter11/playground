@@ -1,0 +1,45 @@
+<%@val s: skinny.Skinny %>
+<%@val keyAndErrorMessages: skinny.KeyAndErrorMessages %>
+<%@val n1: Int %>
+<%@val n2: Int %>
+<%@val result: Int %>
+
+<form method="get" action="${s.url(Controllers.companies.multiplierUrl)}" class="form">
+
+<h3>Multiplier</h3>
+<div class="form-group">
+<label class="control-label">Multiplier</label>
+<div class="controls row">
+<div class="${if(keyAndErrorMessages.hasErrors("company_size")) "has-error" else ""}">
+  <div class="col-xs-2">
+  <input type="number" name="n1"  class="form-control" value="n1" placeholder="${n1}" />
+  </div>
+  <div class="col-xs-1">
+  X
+  </div>
+  <div class="col-xs-2">
+  <input type="number" name="n2"  class="form-control" value="n2"  placeholder="${n2}" />
+  </div>
+</div>
+</div>
+</div>
+
+<div class="form-actions">
+${unescape(s.csrfHiddenInputTag)}
+<input type="submit" class="btn btn-primary" value="${s.i18n.get("submit")}">
+  <a class="btn btn-default" href="${s.url(Controllers.companies.multiplierUrl)}">${s.i18n.get("cancel")}</a>
+</div>
+
+<div class="form-group">
+<div class="controls row">
+  <div class="col-xs-2">
+    <h3>Result</h3>
+  </div>
+<div class="col-xs-2">
+  <h3>${result}</h3>
+</div>
+</div>
+</div>
+
+
+</form>

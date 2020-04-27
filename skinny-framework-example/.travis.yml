@@ -1,0 +1,8 @@
+language: scala
+sudo: false
+jdk: openjdk8
+script: "./travis.sh"
+#after_success: sbt coveralls
+env:
+  global:
+    secure: N/YdFvAhLBBfUgLCh1+Odd6zXVcAdetdggDArj/cQO++ulcseo4H8jsyN93u2fOFyWQadXmcy7pvwKTJmCK5ccoq5cwHSyewaxSmDTPmEDJdP9m8RxnneAZxK/gHSJvMH4LuCFR7MyoAUQYxYzFNE2NWbelN5wj1LsmkWFXmlVs=

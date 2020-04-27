@@ -1,0 +1,11 @@
+<%@val s: skinny.Skinny %>
+
+<h3>Hello World!</h3>
+<hr/>
+<p>
+Your first Skinny app works!
+</p>
+
+<a href="${s.url(Controllers.members.indexUrl)}" class="btn btn-default">Members</a>
+<a href="${s.url(Controllers.companies.indexUrl)}" class="btn btn-default">Companies</a>
+<a href="${s.url(Controllers.companies.multiplierUrl)}" class="btn btn-default">Multiplier</a>
