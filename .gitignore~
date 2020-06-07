@@ -1,6 +1,0 @@
-*.class
-*.log
-
-# IDEs
-.idea
-.vscode
